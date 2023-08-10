@@ -1,0 +1,59 @@
+:root {
+    --accent: #FF0F82;
+    --bg: #141414;
+    --text: #fff;
+    --textMuted: #D3D3D3;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: var(--text);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+.title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 6.4px;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+}
+
+.line {
+    background-color: var(--accent);
+    width: 100px;
+    height: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
