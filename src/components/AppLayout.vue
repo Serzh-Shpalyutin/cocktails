@@ -3,16 +3,32 @@ const props = defineProps({
   imgUrl: {
     type: String,
     required: true
+  },
+  backFunc: {
+    type: Function,
+    required: true
+  },
+  isBackButtonVisible: {
+    type: Boolean,
+    default: true
   }
 })
 </script>
 
 <template>
   <div class="root">
-    <div :style="`background-image: url(${imgUrl});`" class="img">
-    </div>
+    <div :style="`background-image: url(${imgUrl});`" class="img"></div>
 
     <div class="main">
+      <button v-if="isBackButtonVisible" @click="backFunc" class="back-btn"> 
+        <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="26.5" cy="26.5" r="26" stroke="white" />
+          <path d="M21.9167 21.2917L16.6042 26.5L21.9167 31.7084" stroke="white" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path d="M36.3958 26.5H19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+
       <el-button class="random-btn">Get random cocktail</el-button>
       <slot></slot>
     </div>
@@ -52,5 +68,14 @@ const props = defineProps({
   &:active {
     background-color: #a50a55;
   }
+}
+
+.back-btn {
+  position: absolute;
+  top: 32px;
+  left: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 </style>
