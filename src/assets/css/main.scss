@@ -26,6 +26,12 @@ body {
     color: var(--text);
 }
 
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -49,6 +55,19 @@ h6 {
     margin-bottom: 32px;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.info {
+    padding: 80px 0;
+    text-align: center;
+}
+
 .line {
     background-color: var(--accent);
     width: 100px;
@@ -64,7 +83,7 @@ h6 {
 
 .text {
     max-width: 516px;
-    margin: 50px 0px 60px;
+    margin: 50px auto 60px;
     color: var(--textMuted);
     text-align: center;
     font-size: 16px;
