@@ -9,9 +9,11 @@ const props = defineProps({
 
 <template>
   <div class="root">
-    <div class="pic">
-      <img :src="cocktail.strDrinkThumb" :alt="cocktail.strDrink">
-    </div>
+    <router-link :to="`/cocktail/${cocktail.idDrink}`">
+      <div class="pic">
+        <img :src="cocktail.strDrinkThumb" :alt="cocktail.strDrink">
+      </div>
+    </router-link>
     <h2 class="name">
       {{ cocktail.strDrink }}
     </h2>
@@ -22,6 +24,7 @@ const props = defineProps({
 .pic {
   margin-bottom: 15px;
 }
+
 .pic img {
   width: 120px;
   height: 120px;
